@@ -1,0 +1,67 @@
+# Site settings - Lena Baumann
+title: Lena Baumann
+description: "Research • Publications • Music theory & the maths behind it"
+author: Lena Baumann
+email: 
+url: "https://lena-l18.github.io"
+baseurl: ""
+
+# Build settings
+remote_theme: mmistakes/minimal-mistakes@4.26.2
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Minimal Mistakes
+minimal_mistakes_skin: air
+locale: en
+paginate: 5
+paginate_path: /blog/page:num/
+
+# Kramdown for math
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+  - scope:
+      path: "_pages"
+    values:
+      layout: single
+      author_profile: true
+
+# Author profile
+author:
+  name: "Lena Baumann"
+  bio: "music cognition"
+  location: "Zurich, Switzerland"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/lena-l18"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:"
+
+# Social
+twitter:
+  username:
